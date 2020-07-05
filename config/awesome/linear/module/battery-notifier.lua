@@ -18,6 +18,9 @@ awful.widget.watch(
 	update_interval,
 	function(widget, stdout)
 		local battery = stdout:gsub("%%", "")
+		if not battery or battery == '' then
+			return
+		end 
 		awesome.emit_signal("module::battery", tonumber(battery))
 	end
 )
