@@ -318,7 +318,7 @@ local return_button = function()
 						'</b>\nWiFi-Strength: <b>' .. tostring(wifi_strength) .. '%' ..
 						'</b>\nBit rate: <b>' .. tostring(net_speed) .. '</b>'
 					else
-						return 'Ethernet Interface: <b>' .. lan_interface
+						return 'Ethernet Interface: <b>' .. lan_interface .. '</b>'
 					end
 				else
 					return 'Network is currently disconnected'
