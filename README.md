@@ -136,6 +136,14 @@ If you're too lazy to open the wiki, here's some of the details you need to know
 
 ### installation and usage
 
+#### AUR
+
+```bash
+$ yay -S the-glorious-dotfiles
+```
+
+#### Manually
+
 1. Install the [required dependencies](#required-dependencies). Note that there's also an [optional dependencies](https://github.com/manilarome/the-glorious-dotfiles/wiki/Dependencies#optional-dependencies).
 2. Clone this repository.
 

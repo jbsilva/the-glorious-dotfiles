@@ -1,4 +1,4 @@
-# Maintainer: manilarome <hum@idontknowhis.email>
+# Maintainer: manilarome <gerome.matilla07@gmail.com>
 # Contributor: demostanis worlds <demostanis@protonmail.com>
 
 pkgname=the-glorious-dotfiles
