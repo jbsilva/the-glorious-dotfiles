@@ -120,11 +120,11 @@ local ffmpeg_start_recording = function(audio, filename)
 
 	ffmpeg_pid = awful.spawn.easy_async_with_shell(
 		[[		
-		file_name=]] .. filename .. [[		
+		file_name=]] .. filename .. [[
 
 		ffmpeg -video_size ]] .. scripts_tbl.user_resolution .. [[ -framerate ]] .. scripts_tbl.user_fps .. [[ -f x11grab \
-		-i :0.0+]] .. scripts_tbl.user_offset .. add_audio_str .. [[ $file_name
-		]],
+		-i :0.0+]] .. scripts_tbl.user_offset .. add_audio_str .. [[ -c:v libx264 -crf 20 -profile:v baseline -level 3.0 -pix_fmt yuv420p $file_name
+		]], 
 		function(stdout, stderr)
 
 			if stderr and stderr:match('Invalid argument') then
